@@ -30,14 +30,13 @@ public class MainActivity extends AppCompatActivity {
                     public void run() {
                         //Cualquier cosa
                         final String txt = "Loque sea";
-                        //texto.setText(txt);
-                        texto.post(new Runnable() {
+                        runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
                                 texto.setText(txt);
-
                             }
                         });
+
                     }
                 }).start();
 
