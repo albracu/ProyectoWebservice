@@ -25,14 +25,23 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        //Cualquier cosa
+                        String txt = "Loque sea";
+                        //texto.setText(txt);
+                    }
+                }).start();
 
-                Hilo hilo = new Hilo();
-                hilo.start();
+
+               /* Hilo hilo = new Hilo();
+                hilo.start();*/
             }
         });
     }
 
-    public class Hilo extends Thread{
+    /*public class Hilo extends Thread{
 
         public void run(){
 
@@ -54,6 +63,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-
+*/
 
 }
