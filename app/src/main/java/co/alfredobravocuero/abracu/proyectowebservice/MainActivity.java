@@ -29,8 +29,15 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         //Cualquier cosa
-                        String txt = "Loque sea";
+                        final String txt = "Loque sea";
                         //texto.setText(txt);
+                        texto.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                texto.setText(txt);
+
+                            }
+                        });
                     }
                 }).start();
 
